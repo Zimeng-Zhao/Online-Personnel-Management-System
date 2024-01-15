@@ -1,0 +1,36 @@
+{{!--
+
+login form handlebar template
+
+--}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+</head>
+<body>
+    <main>
+        <form id="login-form" action="/login" method="POST">
+            <label for="emailAddressInput">emailAddress</label>
+            <input type="email" id="emailAddressInput" name="emailAddressInput">
+            <label for="passwordInput">password</label>
+            <input type="password" id="passwordInput" name="passwordInput">
+            <button type="submit">Submit</button>
+        </form>
+        {{#if loginfail}}
+            <p>{{errormessage}}</p>
+        {{/if}}
+        <br>
+        <p id="clienterror2"></p>
+        <a href="/register">Click here to register!</a>
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+        crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+        crossorigin="anonymous"></script>
+        <script src="/public/js/client_side_validation.js"></script>
+
+    </main>
+</body>
+</html>

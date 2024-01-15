@@ -1,0 +1,22 @@
+{{!--
+
+If the user is logged in , and 'GET /protected' endpoint is called, you will render this view based on the specs.
+
+--}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>protected</title>
+</head>
+<body>
+    <label id="user">Welcome {{firstName}} {{lastName}} , the time is now: {{currentTime}}. Your role in the system is: {{role}}.</label>
+    {{#if isAdmin}}
+        <a id="toadmin" href="/admin">To the admin page</a>
+    {{/if}}
+    <footer>
+        <a id="alsotologout" href="/logout">Log out</a>
+    </footer>
+</body>
+</html>

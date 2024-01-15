@@ -1,0 +1,23 @@
+{{!--
+
+If the user is logged in and they are an admin user, and 'GET /admin' endpoint is called, you will render this view
+based on the specs.
+
+
+
+--}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>admin</title>
+</head>
+<body>
+    <label id="admin">Welcome {{firstName}} {{lastName}}, the time is now: {{currentTime}}. You get super secret admin access since you are an admin. Remember, with great power comes great responsibility!!</label>
+    <a id="touser" href="/protected">To the protected page</a>
+    <footer>
+        <a id="tologout" href="/logout">Log out</a>
+    </footer>
+</body>
+</html>
